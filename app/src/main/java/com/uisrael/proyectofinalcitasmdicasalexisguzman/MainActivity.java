@@ -30,7 +30,7 @@ public class MainActivity extends AppCompatActivity {
 
             if (etContraseña.getText().toString().equals(pass)) {
                 Intent intent = new Intent(MainActivity.this,Agendamiento.class);
-
+    
                 startActivity(intent);
 
             } else {

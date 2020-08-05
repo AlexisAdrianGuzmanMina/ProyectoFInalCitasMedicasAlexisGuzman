@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "256152684720",
+    "firebase_url": "https://medical-app-969c5.firebaseio.com",
+    "project_id": "medical-app-969c5",
+    "storage_bucket": "medical-app-969c5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:256152684720:android:7e1182e5ea67d623545375",
+        "android_client_info": {
+          "package_name": "com.uisrael.proyectofinalcitasmdicasalexisguzman"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "256152684720-r8ahnh0rf3mq1onjfdbf7h21pq3r1ht8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.uisrael.proyectofinalcitasmdicasalexisguzman",
+            "certificate_hash": "a93f96efbcf1121c2b88d7c98dcd5c42b4b1624e"
+          }
+        },
+        {
+          "client_id": "256152684720-2mle2m7d77nnfqv6dr90i0j1551ic4oa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCttu_342GNGQvgQpd30MCwiwSGq3yK1Fw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "256152684720-2mle2m7d77nnfqv6dr90i0j1551ic4oa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
