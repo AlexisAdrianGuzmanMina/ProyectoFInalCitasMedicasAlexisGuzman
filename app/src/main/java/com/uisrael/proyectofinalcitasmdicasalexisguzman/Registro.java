@@ -16,6 +16,9 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class Registro extends AppCompatActivity {
     EditText etnombre, etciudad, etcontraseña;
@@ -47,7 +50,7 @@ public class Registro extends AppCompatActivity {
         if (!name.isEmpty()&& !city.isEmpty()&&!password.isEmpty()){
             if (password.length()>=6){
                 registerUser();
-                startActivity(intent3);
+                //startActivity(intent3);
         } else{
                 Toast.makeText(this, "La contraseña debe tener mínimo 6 caracteres", Toast.LENGTH_SHORT).show();
             }
@@ -62,7 +65,25 @@ public class Registro extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    Map<String, Object> map = new HashMap<>();
+                    map.put("name", name);
+                    map.put("city", city);
+                    map.put("password", password);
 
+                    String id = Auth.getCurrentUser().getUid();
+                    Database.child("Users").child(id).setValue(map).addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task2) {
+                            if(task2.isSuccessful()){
+                                startActivity(new Intent(Registro.this,Agendamiento.class));
+                                finish();
+                            }
+                            else{
+                                Toast.makeText(Registro.this, "No se pudieron ingresar los datos correctamente", Toast.LENGTH_SHORT).show();
+                            }
+
+                        }
+                    });
                 }
                 else{
                     Toast.makeText(Registro.this, "No se pudo resgistrar correctamente", Toast.LENGTH_SHORT).show();
